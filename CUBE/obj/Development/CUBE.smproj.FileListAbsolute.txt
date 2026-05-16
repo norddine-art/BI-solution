@@ -1,0 +1,7 @@
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\bin\Model.asdatabase
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\bin\Model.deploymenttargets
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\bin\Model.deploymentoptions
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\obj\Development\CUBE.smproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\obj\Development\Model.asdatabase
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\obj\Development\Model.deploymentoptions
+C:\Users\hp\source\repos\COPAG_COMMERCIAL_SOLUTION\CUBE\obj\Development\Model.deploymenttargets

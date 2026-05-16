@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-IC9SR86_DATALAKE.STAGING"
+  DTS:DTSID="{ABDC4862-7D53-4243-B14D-8244A827CCDA}"
+  DTS:CreationName="ADO">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-IC9SR86\DATALAKE;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-CP_INI_LOAD-{ABDC4862-7D53-4243-B14D-8244A827CCDA}DESKTOP-IC9SR86\DATALAKE.STAGING;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

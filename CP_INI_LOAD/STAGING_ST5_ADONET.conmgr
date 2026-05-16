@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="STAGING_ST5_ADONET"
+  DTS:DTSID="{63EF5A36-26F3-4B00-AFC6-D5C844A77330}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=10.7.7.78\ST_5;User ID=Stage;Initial Catalog=OLTP_ITERN_COM_CP_T;Persist Security Info=True;Application Name=SSIS-CP_INI_LOAD-{63EF5A36-26F3-4B00-AFC6-D5C844A77330}10.7.7.78\ST_5.Stage;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHzElgWRqAk2dcJoAHWrEaQAAAAACAAAAAAAQZgAAAAEAACAAAABct5sr5vlK2snkSi6KceWg9EIP4VIDH5rb8BAr4D8XbAAAAAAOgAAAAAIAACAAAAA+E21+sJ48BtMsCK4MvtVrV42SQHj/xhDhlspZ6Zvz7YAAAADe/6YL3x+WWCQz9X+SMoVAKu4RsZfeI+rneqLQXqe4j8RNf1iNEznEd0mCd9UzdpehUV/rca7ts10MdKFXffftdVFDw1ND7M89CzHo7FCBJjfp/mAH9BQsknAtz5h6mKb3PSkzH5Sw3wtgE++7HCWAu+dDDKw7qcILwP47aqRO8EAAAAAe0H0KEe9+xZrQ9lrd3gw51NAXB6brW/nq1TrVpOwZLjDyH6qTinNELQLIPJnIdLsn3nmwC9vOsJk9FFVef8+/</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

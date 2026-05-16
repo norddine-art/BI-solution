@@ -1,0 +1,1008 @@
+{
+  "name": "CUBE",
+  "compatibilityLevel": 1200,
+  "model": {
+    "name": "Modèle",
+    "culture": "fr-FR",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-IC9SR86\\DATAWAREHOUSE;Initial Catalog=DTWH;User ID=ABAHOUS;Persist Security Info=true",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DIM_AGENCE",
+        "columns": [
+          {
+            "name": "AGENCE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "AGENCE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_AGCE",
+            "dataType": "int64",
+            "sourceColumn": "CODE_AGCE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NOM_AGENCE",
+            "dataType": "string",
+            "sourceColumn": "NOM_AGENCE",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_AGENCE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_AGENCE].* FROM [dbo].[DIM_AGENCE] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_AGENCE].* FROM [dbo].[DIM_AGENCE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_AGENCE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_BLOC",
+        "columns": [
+          {
+            "name": "BLOC_KEY",
+            "dataType": "int64",
+            "sourceColumn": "BLOC_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_BLOC",
+            "dataType": "int64",
+            "sourceColumn": "CODE_BLOC",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NOM_BLOC",
+            "dataType": "string",
+            "sourceColumn": "NOM_BLOC",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ZONE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "ZONE_KEY",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_BLOC",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_BLOC].* FROM [dbo].[DIM_BLOC] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_BLOC].* FROM [dbo].[DIM_BLOC] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_BLOC"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_DATE",
+        "columns": [
+          {
+            "name": "DATE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "DATE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PK_Date",
+            "dataType": "dateTime",
+            "sourceColumn": "PK_Date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Date_Nom",
+            "dataType": "string",
+            "sourceColumn": "Date_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Année_Fiscale",
+            "dataType": "dateTime",
+            "sourceColumn": "Année_Fiscale",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Année_Fiscale_Nom",
+            "dataType": "string",
+            "sourceColumn": "Année_Fiscale_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Semestre_Fiscal",
+            "dataType": "dateTime",
+            "sourceColumn": "Semestre_Fiscal",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Semestre_Fiscal_Nom",
+            "dataType": "string",
+            "sourceColumn": "Semestre_Fiscal_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Trimestre_Fiscal",
+            "dataType": "dateTime",
+            "sourceColumn": "Trimestre_Fiscal",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Trimestre_Fiscal_Nom",
+            "dataType": "string",
+            "sourceColumn": "Trimestre_Fiscal_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Quadrimestre_Fiscal",
+            "dataType": "dateTime",
+            "sourceColumn": "Quadrimestre_Fiscal",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Quadrimestre_Fiscal_Nom",
+            "dataType": "string",
+            "sourceColumn": "Quadrimestre_Fiscal_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Mois_Fiscal",
+            "dataType": "dateTime",
+            "sourceColumn": "Mois_Fiscal",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Mois_Fiscal_Nom",
+            "dataType": "string",
+            "sourceColumn": "Mois_Fiscal_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Semaine_Fiscale",
+            "dataType": "dateTime",
+            "sourceColumn": "Semaine_Fiscale",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Semaine_Fiscale_Nom",
+            "dataType": "string",
+            "sourceColumn": "Semaine_Fiscale_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal",
+            "dataType": "dateTime",
+            "sourceColumn": "Jour_Fiscal",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "Jour_Fiscal_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Semestre",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_Du_Semestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Semestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_Du_Semestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Quadrimestre",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_Du_Quadrimestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Quadrimestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_Du_Quadrimestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Trimestre",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_Du_Trimestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Trimestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_Du_Trimestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Mois",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_Du_Mois",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_Du_Mois_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_Du_Mois_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Jour_Fiscal_De_La_Semaine",
+            "dataType": "int64",
+            "sourceColumn": "Jour_Fiscal_De_La_Semaine",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Jour_Fiscal_De_La_Semaine_Nom",
+            "dataType": "string",
+            "sourceColumn": "Jour_Fiscal_De_La_Semaine_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Semaine_Fiscale_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Semaine_Fiscale_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Semaine_Fiscale_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Semaine_Fiscale_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Mois_Fiscal_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Mois_Fiscal_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Mois_Fiscal_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Mois_Fiscal_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Semestre",
+            "dataType": "int64",
+            "sourceColumn": "Mois_Fiscal_Du_Semestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Semestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Mois_Fiscal_Du_Semestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Quadrimestre",
+            "dataType": "int64",
+            "sourceColumn": "Mois_Fiscal_Du_Quadrimestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Quadrimestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Mois_Fiscal_Du_Quadrimestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Trimestre",
+            "dataType": "int64",
+            "sourceColumn": "Mois_Fiscal_Du_Trimestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Mois_Fiscal_Du_Trimestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Mois_Fiscal_Du_Trimestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Quadrimestre_Fiscal_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Quadrimestre_Fiscal_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Quadrimestre_Fiscal_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Quadrimestre_Fiscal_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Trimestre_Fiscal_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Trimestre_Fiscal_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Trimestre_Fiscal_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Trimestre_Fiscal_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Trimestre_Fiscal_Du_Semestre",
+            "dataType": "int64",
+            "sourceColumn": "Trimestre_Fiscal_Du_Semestre",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Trimestre_Fiscal_Du_Semestre_Nom",
+            "dataType": "string",
+            "sourceColumn": "Trimestre_Fiscal_Du_Semestre_Nom",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Semestre_Fiscal_De_lannée",
+            "dataType": "int64",
+            "sourceColumn": "Semestre_Fiscal_De_lannée",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Semestre_Fiscal_De_lannée_Nom",
+            "dataType": "string",
+            "sourceColumn": "Semestre_Fiscal_De_lannée_Nom",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_DATE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_DATE].* FROM [dbo].[DIM_DATE] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_DATE].* FROM [dbo].[DIM_DATE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_DATE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_FAMILLE",
+        "columns": [
+          {
+            "name": "FAMILLE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "FAMILLE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_FAMILLE",
+            "dataType": "int64",
+            "sourceColumn": "CODE_FAMILLE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FAMILLE",
+            "dataType": "string",
+            "sourceColumn": "FAMILLE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "GAMME_KEY",
+            "dataType": "int64",
+            "sourceColumn": "GAMME_KEY",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_FAMILLE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_FAMILLE].* FROM [dbo].[DIM_FAMILLE] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_FAMILLE].* FROM [dbo].[DIM_FAMILLE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_FAMILLE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_GAMME",
+        "columns": [
+          {
+            "name": "GAMME_KEY",
+            "dataType": "int64",
+            "sourceColumn": "GAMME_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_GAMME",
+            "dataType": "int64",
+            "sourceColumn": "CODE_GAMME",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "GAMME",
+            "dataType": "string",
+            "sourceColumn": "GAMME",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_GAMME",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_GAMME].* FROM [dbo].[DIM_GAMME] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_GAMME].* FROM [dbo].[DIM_GAMME] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_GAMME"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PRODUIT",
+        "columns": [
+          {
+            "name": "PRODUIT_KEY",
+            "dataType": "int64",
+            "sourceColumn": "PRODUIT_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_PRODUIT",
+            "dataType": "int64",
+            "sourceColumn": "CODE_PRODUIT",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PRODUIT",
+            "dataType": "string",
+            "sourceColumn": "PRODUIT",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FAMILLE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "FAMILLE_KEY",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_PRODUIT",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_PRODUIT].* FROM [dbo].[DIM_PRODUIT] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_PRODUIT].* FROM [dbo].[DIM_PRODUIT] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_PRODUIT"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_SECTEUR",
+        "columns": [
+          {
+            "name": "SECTEUR_KEY",
+            "dataType": "int64",
+            "sourceColumn": "SECTEUR_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_SECTEUR",
+            "dataType": "int64",
+            "sourceColumn": "CODE_SECTEUR",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NOM_SECTEUR",
+            "dataType": "string",
+            "sourceColumn": "NOM_SECTEUR",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "BLOC_KEY",
+            "dataType": "int64",
+            "sourceColumn": "BLOC_KEY",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_SECTEUR",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_SECTEUR].* FROM [dbo].[DIM_SECTEUR] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_SECTEUR].* FROM [dbo].[DIM_SECTEUR] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_SECTEUR"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ZONE",
+        "columns": [
+          {
+            "name": "ZONE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "ZONE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_ZONE",
+            "dataType": "int64",
+            "sourceColumn": "CODE_ZONE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "NOM_ZONE",
+            "dataType": "string",
+            "sourceColumn": "NOM_ZONE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "AGENCE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "AGENCE_KEY",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ZONE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_ZONE].* FROM [dbo].[DIM_ZONE] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_ZONE].* FROM [dbo].[DIM_ZONE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ZONE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_ARTICLE",
+        "columns": [
+          {
+            "name": "ARTICLE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "ARTICLE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODE_ARTICLE",
+            "dataType": "int64",
+            "sourceColumn": "CODE_ARTICLE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PRODUIT_KEY",
+            "dataType": "int64",
+            "sourceColumn": "PRODUIT_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "POIDS",
+            "dataType": "int64",
+            "sourceColumn": "POIDS",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "LABELLE_COURT",
+            "dataType": "string",
+            "sourceColumn": "LABELLE_COURT",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_ARTICLE",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_ARTICLE].* FROM [dbo].[DIM_ARTICLE] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_ARTICLE].* FROM [dbo].[DIM_ARTICLE] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_ARTICLE"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "FACT_SALES",
+        "columns": [
+          {
+            "name": "DATE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "DATE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SECTEUR_KEY",
+            "dataType": "int64",
+            "sourceColumn": "SECTEUR_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ARTICLE_KEY",
+            "dataType": "int64",
+            "sourceColumn": "ARTICLE_KEY",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TOTAL_VENDU",
+            "dataType": "int64",
+            "sourceColumn": "TOTAL_VENDU",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TOTAL_INVENDU_POINTE",
+            "dataType": "int64",
+            "sourceColumn": "TOTAL_INVENDU_POINTE",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TOTAL_RENDUS_COM",
+            "dataType": "int64",
+            "sourceColumn": "TOTAL_RENDUS_COM",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TOTAL_RENDUS_US",
+            "dataType": "int64",
+            "sourceColumn": "TOTAL_RENDUS_US",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PRIX_VNT",
+            "dataType": "double",
+            "sourceColumn": "PRIX_VNT",
+            "sourceProviderType": "Double"
+          },
+          {
+            "type": "calculated",
+            "name": "Prix global",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": " [TOTAL_VENDU] * [PRIX_VNT]"
+          },
+          {
+            "type": "calculated",
+            "name": "Ajouter une colonne2",
+            "dataType": "int64",
+            "isDataTypeInferred": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FACT_SALES",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FACT_SALES].* FROM [dbo].[FACT_SALES] ",
+              "dataSource": "SqlServer DESKTOP-IC9SR86DATAWAREHOUSE DTWH"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Quantité Total",
+            "expression": " (SUM(FACT_SALES[TOTAL_VENDU]) * SUM(DIM_ARTICLE[POIDS])) / 1000000"
+          },
+          {
+            "name": "Quantité Total Invendue",
+            "expression": "( SUM(FACT_SALES[TOTAL_INVENDU_POINTE]) * SUM(DIM_ARTICLE[POIDS]))/1000000"
+          },
+          {
+            "name": "Perte",
+            "expression": "(( SUM(FACT_SALES[TOTAL_RENDUS_COM])+SUM(FACT_SALES[TOTAL_RENDUS_US])) * SUM(DIM_ARTICLE[POIDS])) /1000000"
+          },
+          {
+            "name": "Evo Qty T A vs A-1 %",
+            "expression": [
+              " ",
+              "VAR Current_Value = [Quantité Total]",
+              "VAR Last_Value = ",
+              "    CALCULATE(",
+              "        [Quantité Total],",
+              "        SAMEPERIODLASTYEAR(DIM_DATE[PK_Date])",
+              "    )",
+              "RETURN ",
+              "    DIVIDE(",
+              "        (Current_Value - Last_Value),",
+              "        Last_Value,",
+              "        0  -- Retourne 0 si division par zéro",
+              "    )"
+            ],
+            "formatString": "0.00 %;-0.00 %;0.00 %"
+          },
+          {
+            "name": "Evo Qty T M vs M-1 %",
+            "expression": [
+              "",
+              "VAR Current_Value = [Quantité Total]",
+              "VAR Last_Value =",
+              "    CALCULATE(",
+              "        [Quantité Total],",
+              "        DATEADD(DIM_DATE[Mois_Fiscal],-1,MONTH)",
+              "    )",
+              "RETURN",
+              "    DIVIDE(",
+              "        (Current_Value - Last_Value),",
+              "        Last_Value,",
+              "        0  -- Retourne 0 si division par zéro",
+              "    )"
+            ]
+          },
+          {
+            "name": "taux invendu",
+            "expression": "([Quantité Total Invendue]/[Quantité Total])",
+            "formatString": "0.00 %;-0.00 %;0.00 %"
+          },
+          {
+            "name": "taux perte",
+            "expression": "([Perte]/[Quantité Total])",
+            "formatString": "0.00 %;-0.00 %;0.00 %"
+          },
+          {
+            "name": "CA",
+            "expression": " SUM(FACT_SALES[Prix global])"
+          },
+          {
+            "name": "prix de vente en kg",
+            "expression": " DIVIDE([Quntité Kg], [Prix Vente Global],0)"
+          },
+          {
+            "name": "Quntité Kg",
+            "expression": " Divide(SUM(FACT_SALES[TOTAL_VENDU]) * SUM(DIM_ARTICLE[POIDS]), 1000,0)"
+          },
+          {
+            "name": "Prix Vente Global",
+            "expression": " Sum(FACT_SALES[PRIX_VNT])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FACT_SALES].* FROM [dbo].[FACT_SALES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FACT_SALES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "29aa2212-734f-4fd0-91bc-10aa6a6e1b9e",
+        "fromTable": "DIM_PRODUIT",
+        "fromColumn": "FAMILLE_KEY",
+        "toTable": "DIM_FAMILLE",
+        "toColumn": "FAMILLE_KEY"
+      },
+      {
+        "name": "a92155b5-5c79-4e61-8eee-1b4022e9ad99",
+        "fromTable": "DIM_FAMILLE",
+        "fromColumn": "GAMME_KEY",
+        "toTable": "DIM_GAMME",
+        "toColumn": "GAMME_KEY"
+      },
+      {
+        "name": "931274ec-c412-43c7-9f12-9c4a0d650ff6",
+        "fromTable": "DIM_SECTEUR",
+        "fromColumn": "BLOC_KEY",
+        "toTable": "DIM_BLOC",
+        "toColumn": "BLOC_KEY"
+      },
+      {
+        "name": "f290dad3-0add-4e36-a172-662cbe26acdb",
+        "fromTable": "DIM_BLOC",
+        "fromColumn": "ZONE_KEY",
+        "toTable": "DIM_ZONE",
+        "toColumn": "ZONE_KEY"
+      },
+      {
+        "name": "66662231-b378-48e1-bef8-ce2f5b6fa745",
+        "fromTable": "DIM_ZONE",
+        "fromColumn": "AGENCE_KEY",
+        "toTable": "DIM_AGENCE",
+        "toColumn": "AGENCE_KEY"
+      },
+      {
+        "name": "429a3882-f484-49b3-8e53-dae4635512b6",
+        "fromTable": "FACT_SALES",
+        "fromColumn": "DATE_KEY",
+        "toTable": "DIM_DATE",
+        "toColumn": "DATE_KEY"
+      },
+      {
+        "name": "54d54baf-447f-49ef-9355-4d28fe6ffc37",
+        "fromTable": "FACT_SALES",
+        "fromColumn": "ARTICLE_KEY",
+        "toTable": "DIM_ARTICLE",
+        "toColumn": "ARTICLE_KEY"
+      },
+      {
+        "name": "4afa03e4-4feb-43e3-a803-bd106e06001f",
+        "fromTable": "FACT_SALES",
+        "fromColumn": "SECTEUR_KEY",
+        "toTable": "DIM_SECTEUR",
+        "toColumn": "SECTEUR_KEY"
+      },
+      {
+        "name": "69fac1bb-a063-4489-9ef8-9afe7f64982e",
+        "fromTable": "DIM_ARTICLE",
+        "fromColumn": "PRODUIT_KEY",
+        "toTable": "DIM_PRODUIT",
+        "toColumn": "PRODUIT_KEY"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  }
+}

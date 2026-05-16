@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DATALAKE_ADONET"
+  DTS:DTSID="{544EE7BE-964B-4DFB-9AF8-3E69CC771F4D}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-IC9SR86\DATALAKE;Initial Catalog=STAGING;Integrated Security=True;Application Name=SSIS-CP_INI_LOAD-{544EE7BE-964B-4DFB-9AF8-3E69CC771F4D}DESKTOP-IC9SR86\DATALAKE.STAGING1;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
